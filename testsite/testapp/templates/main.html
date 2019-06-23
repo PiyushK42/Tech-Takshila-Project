@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home</title>
+
+    <!-- Compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+
+    <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">  
+      </script>-->
+
+    <!--Fonts-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Local-->
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+
+    <!--jQuery-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--<script type = "text/javascript"  
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+<body>
+  
+   <div class="topnav">
+     <a href="{% url 'index' %}"><img src="{% static 'images/Logo-2.png' %}" class="logo"></a>
+     <ul class="nav-right">
+       <li><a href="#">ABOUT US</a></li>
+       <li><a href="#">FAQ</a><li>
+       <li><a href="#">CONTACT US</a><li>
+   </div>
+
+    {% block content %}
+    {% endblock %}
+
+   <!--<footer class="page-footer" style="background-color: #41af57; margin-top: 70px;">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+            
+                  <img src="{% static 'images/Logo-2.png' %}" style="width: 13%; height: auto; display: block; float: left;"> 
+                  <h5 class="white-text" style="margin-left: 60px;">TECH TAKSHILA</h5>  
+                <p class="grey-text text-lighten-4">Tech Takshila</p>
+                <p class="grey-text text-lighten-4">techtakshila@gmail.com</p>
+                <p class="grey-text text-lighten-4">www.techtakshila.com</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Connect Us</h5>
+                <ul>
+                  <li style="margin-top: 5px;">
+                    <img src="{% static 'images/Twitter-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
+                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Twitter</a>
+                  </li>
+                  <li style="margin-top: 5px;">
+                    <img src="{% static 'images/linkedin-icon.png' %}" style="width: 8%; height: auto; display: block; float: left;">
+                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">LinkedIn</a>
+                  </li>
+                  <li style="margin-top: 5px;">
+                    <img src="{% static 'images/facebook-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
+                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Facebbok</a>
+                  </li>
+                  <li style="margin-top: 5px;">
+                    <img src="{% static 'images/instagram-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
+                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Instagram</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Copyright Text
+            </div>
+          </div>
+        </footer>-->
+
+</body>
+</html>	

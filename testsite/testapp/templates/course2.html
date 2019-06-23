@@ -1,0 +1,451 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Subject</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/Distributed_System/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+  
+<body>
+	<div class="toggle-btn" onclick="togglesubjectbar()">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+    
+	<script>
+		function togglesubjectbar(){
+			var element = document.getElementById("subbar");
+			element.classList.toggle("hide");
+		}
+	</script>
+	<h5 class="subjectname">DISTRIBUTED SYSTEM</h5>
+  <!--  <div class="subject-intro"> 
+     <h5 class="subjectname">DISTRIBUTED SYSTEM</h5>  
+     <p>A distributed system contains multiple nodes that are physically separate but linked together using the network. All the nodes in this system communicate with each other and handle processes in tandem. Each of these nodes contains a small part of the distributed operating system software. All the nodes in the distributed system are connected to each other. So nodes can easily  share data with other nodes. More nodes can easily be added to the distributed system i.e. it can be scaled as required. Failure of one node does not lead to the failure of the entire distributed system. Other nodes can still communicate with each other. Resources like printers can be shared with multiple nodes rather than being restricted to just one.</p>
+   </div> -->
+
+  <div class="row" style="margin-top: 20px; border-bottom: 1px solid rgb(223, 223, 223);">
+  <div class="subject-page-content" style="border-top: 1px solid rgb(223, 223, 223);">	
+   <div class="col s3 m4 l3" id="subbar" style="transition: all 500ms linear;">
+   	<div class="subject-bar" style="display: flex; flex-direction: column; position: relative; flex: 0 1 300px; overflow: hidden; padding: 0px 15px 0px; border-right: 1px solid rgb(223, 223, 223); /*transition: all 500ms ease 0s;*/" >
+   		<h5 class="subject-module" style="color: black; font-weight: bold; font-size: 18px; margin: 30px 0px 15px;">CHAPTERS</h5>
+   		<div class="bar-design" style="border: 0px; background-color: rgb(201, 200, 255);/*2.rgb(243, 243, 247);/*1.#e1f4e2;*/ margin: 0px 0px 15px; height: 5px; border-radius: 1000px;">
+   			<span>&nbsp</span>
+   		</div> 
+   	<!--	
+     <div class="subject-1" style="overflow-y: auto; max-height: 100%; flex: 1 1 auto; margin: 4px -15px 0px; padding: 3px 15px 0px; list-style: none;">
+     	<div class="subject-2" style="display: flex; flex-direction: column; margin-bottom: 2px;">
+     	  <div class="subject-3" style="display: flex; align-items: flex-start; -webkit-box-pack: justify; justify-content: space-between; flex-wrap: nowrap;">
+     	  	<div class="subject-4" style="font-weight: 600; color: black; font-size: 14px; /*text-overflow: ellipsis; white-space: nowrap; cursor: pointer;*/ flex: 0 1 auto;margin: 10px 30px 15px 0px; overflow: hidden;">
+     	  		<span>MODULE I : Distributed Systems</span>
+     	  	</div>	
+     	  </div>	
+        </div>
+     </div>-->
+     <div class="subject-1" style="overflow-y: auto; height: 415px; flex: 1 1 auto; margin: 4px -15px 0px; padding: 0px 15px 0px; list-style: none;">
+        <div class="subject-modules-name" style="display: flex; flex-direction: column; margin-left: 12px; margin-right: 12px; margin-bottom: 20px; flex: 0 0 auto;">
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'chapter2' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>Consistent Hashing</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>Sharding</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; /*border-left: 1px solid rgb(78, 189, 211);*/">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>Consistency</span></div>
+        		</a>	
+        	</div>
+            
+            <!--
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; /*border-left: 1px solid rgb(78, 189, 211);*/">
+        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
+        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
+        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		 		</g>
+        		 	</g>
+        		 </svg> 
+        		</div>
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>-->
+          </div>	
+             
+        </div>
+      
+        <script>
+        	$(document).ready(function () {
+               $('.subject-modules-name .subject-modules-name-2 a div').find('span').click(function () {
+                 //removing the previous selected menu state
+               $('.subject-modules-name .subject-modules-name-2 a div').find('span.active').removeClass('active');
+                 //adding the state for this selected menu
+               $(this).addClass('active');
+              });
+            });
+        </script>
+        
+
+     
+<!--
+        <div class="subject-1" style="overflow-y: auto; max-height: 100%; flex: 1 1 auto; margin: 4px -15px 0px; padding: 3px 15px 0px; list-style: none;">
+     	<div class="subject-2" style="display: flex; flex-direction: column; margin-bottom: 2px;">
+     	  <div class="subject-3" style="display: flex; align-items: flex-start; -webkit-box-pack: justify; justify-content: space-between; flex-wrap: nowrap;">
+     	  	<div class="subject-4" style="font-weight: 600; color: black; font-size: 14px; /*white-space: nowrap; cursor: pointer;*/ flex: 0 1 auto;margin: 10px 30px 15px 0px; overflow: hidden;">
+     	  		<span>MODULE II : Distributed Systems Applications</span>
+     	  	</div>	
+     	  </div>	
+        </div>
+     </div>
+        <div class="subject-modules-name" style="display: flex; flex-direction: column; margin-left: 12px; flex: 0 0 auto;">
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>SQL Vs NoSQL</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'chapter2' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Types of NoSQL</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Caching</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Load Balancing</span></div>
+        		</a>	
+        	</div>
+        </div>
+
+        
+      <div class="subject-1" style="overflow-y: auto; max-height: 100%; flex: 1 1 auto; margin: 4px -15px 0px; padding: 3px 15px 0px; list-style: none;">
+     	<div class="subject-2" style="display: flex; flex-direction: column; margin-bottom: 2px;">
+     	  <div class="subject-3" style="display: flex; align-items: flex-start; -webkit-box-pack: justify; justify-content: space-between; flex-wrap: nowrap;">
+     	  	<div class="subject-4" style="font-weight: 600; color: black; font-size: 14px; /*text-overflow: ellipsis; white-space: nowrap; cursor: pointer;*/ flex: 0 1 auto;margin: 10px 30px 15px 0px; overflow: hidden;">
+     	  		<span>MODULE III : Don’t reinvent the wheel</span>
+     	  	</div>	
+     	  </div>	
+        </div>
+     </div>
+        <div class="subject-modules-name" style="display: flex; flex-direction: column; margin-left: 12px; flex: 0 0 auto;">
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Elastic Search</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'chapter2' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Workflow Systems(AWS Step Functions/ AWS SWF)</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Data Streaming and Queuing (Kinesis and SQS)</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>MapReduce</span></div>
+        		</a>	
+        	</div>
+
+        </div>
+
+     <div class="subject-1" style="overflow-y: auto; max-height: 100%; flex: 1 1 auto; margin: 4px -15px 0px; padding: 3px 15px 0px; list-style: none;">
+     	<div class="subject-2" style="display: flex; flex-direction: column; margin-bottom: 2px;">
+     	  <div class="subject-3" style="display: flex; align-items: flex-start; -webkit-box-pack: justify; justify-content: space-between; flex-wrap: nowrap;">
+     	  	<div class="subject-4" style="font-weight: 600; color: black; font-size: 14px; /*text-overflow: ellipsis; white-space: nowrap; cursor: pointer;*/ flex: 0 1 auto;margin: 10px 30px 15px 0px; overflow: hidden;">
+     	  		<span>MODULE I : Distributed Systems</span>
+     	  	</div>	
+     	  </div>	
+        </div>
+     </div>
+        <div class="subject-modules-name" style="display: flex; flex-direction: column; margin-left: 12px; flex: 0 0 auto;">
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>CAP Theorem</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'chapter2' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Consistent Hashing</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Sharding</span></div>
+        		</a>	
+        	</div>
+
+        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(151, 151, 151);">
+        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 14px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none;overflow: hidden; transition: all 0.2s ease 0s;">
+        			<div><span>Consistency</span></div>
+        		</a>	
+        	</div>
+
+        </div>
+          -->
+    </div> 
+
+  <!-- <h5 class="chapter"><a href="{% url 'content' %}" target="test1">Principles and Paradigms</a></h5>
+   <h5 class="chapter"><a href="{% url 'content' %}" target="test1">Load Balancing</a></h5>
+   <h5 class="chapter"><a href="{% url 'chapter2' %}" target="test1">Consistent Hashing</a></h5>
+    -->
+   </div>
+  <div class="col s12 m8 l9" id="contentbar">
+   	<iframe src="{% url 'content' %}" height="495" width="100%" frameborder="0" name="test1" id="test1" class="content" style="box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07);">
+   	</iframe>
+    
+   </div>
+  </div> 	
+ </div>  
+</body>
+</html>
+{% endblock %}	
