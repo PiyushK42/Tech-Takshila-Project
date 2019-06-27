@@ -9,11 +9,14 @@ def index(request):
 def course(request):
 	return render(request,'course2.html')
 
-def content_fetch(request):
-	return render(request,'content.html')
+def chapter1(request):
+	return render(request,'CAP_theorem.html')
 
 def chapter2(request):
-    return render(request,'chapter2.html')	
+    return render(request,'consistent_hashing.html')
+
+def subject_page(request):
+    return render(request,'distributed_system.html')	
 
 def simulation1(request):
 	return render(request,'simulation_load_balancing.html')

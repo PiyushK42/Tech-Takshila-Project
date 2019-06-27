@@ -44,7 +44,7 @@
     <h5 style="margin-top: 50px; margin-left: 40px; font-weight: bold;">Simulation:</h5>
      
   
-    <iframe src="{% url 'simulation-load-balancing' %}" height="370" width="800" frameborder="0" style="margin-left: 30px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px; border-left: 5px solid rgb(201, 200, 255);">
+    <iframe src="{% url 'simulation-load-balancing' %}" height="370" width="85%" frameborder="0" id="simulation" style="margin-left: 5px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px 0px; border-left: 5px solid rgb(201, 200, 255);">
     </iframe>
     
     <h5 style="margin-top: 60px; font-weight: bold;">II. Distributed Caching:</h5>
@@ -59,7 +59,7 @@
     <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 5: S3 goes down, request for key3 now  gets redirected to S4</i></p>
     <h5 style="margin-top: 50px; margin-left: 40px; font-weight: bold;">Simulation:</h5>
 
-    <iframe src="{% url 'simulation-distributed-caching' %}" frameborder="0" height="370" width="800" style="margin-left: 30px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px; border-left: 5px solid rgb(201, 200, 255);">
+    <iframe src="{% url 'simulation-distributed-caching' %}" frameborder="0" height="370" width="85%" class="code" style="margin-left: 5px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px 0px; border-left: 5px solid rgb(201, 200, 255);">
     </iframe>
    </div> 
   </main> 
@@ -79,14 +79,7 @@
      </div>
 
       <script>
-       $(".subject-modules-name .subject-modules-name-2 a div span").filter(function(){
-            $(this).text() === $('.prev-next-functionality .prev-next-functionality-2 .prev span').text();
-          }).function(){
-                 //removing the previous selected menu state
-               $('.subject-modules-name .subject-modules-name-2 a div').find('span.active').removeClass('active');
-                 //adding the state for this selected menu
-               $(this).addClass('active');
-              };
+
      </script>
 
 </body>

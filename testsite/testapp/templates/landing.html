@@ -10,8 +10,8 @@
   <title>Home</title>
 
     <!-- Compiled and minified CSS -->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="{% static 'css/materialize.css' %}">-->
     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
 
@@ -32,100 +32,282 @@
     <!--<script type = "text/javascript"  
          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
 
- </head>        
+ </head> 
+
+
+<style>
+
+// RESTYLE OWL CAROUSEL NAVS WITH MATERIAL ICONS
+// Reference: http://stackoverflow.com/a/36889571/2218697
+.owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    font-family: 'Material Icons';
+    font-size: 4rem;
+}
+.owl-nav {height:0;margin:0;}
+
+.owl-carousel .owl-nav .owl-prev:before{
+    font-family: "Material Icons";
+    content: "\E5CC";
+    font-size: 4rem;
+    margin-left:16px;
+    position: absolute;
+    top: 40%;
+    right: 0px;
+    height: auto;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
+                 0px 0px 8px rgba(0,0,0,0.05),
+                 0px 0px 12px rgba(0,0,0,0.05);
+}
+
+.owl-carousel .owl-nav .owl-next:after{
+    font-family: "Material Icons";
+    content: "\E5CB";
+    font-size: 4rem;
+    margin-right: 16px;
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    height: 100%;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
+                 0px 0px 8px rgba(0,0,0,0.05),
+                 0px 0px 12px rgba(0,0,0,0.05);
+ }
+
+}
+
+.card-reveal::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.card-reveal::-webkit-scrollbar
+{
+  width: 7px;
+  background-color: #e3e8e3;
+  border-radius: 10px; 
+}
+
+.card-reveal::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+  background-color: #bfc1bf;
+}
+
+</style>
+
+<script>
+
+$(document).ready(function(){
+  
+  // OWL CAROUSEL - https://owlcarousel2.github.io/OwlCarousel2/
+  $('#main-slider .owl-carousel').owlCarousel(
+    {
+      items: 1,
+      margin: 0,
+      loop: true,
+      nav: false,
+      navText: ['Back','Next'],
+      dots: false,
+      dotsEach: true,
+      autoplay: true,
+      autoplaySpeed: 500,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+    }
+  );
+  $('#owl-1 .owl-carousel').owlCarousel(
+    {
+      items: 4,
+      itemsTablet: [500,1],
+      margin: 16,
+      loop: true,
+      stagePadding: 64,
+      nav: true,
+      //navText: ['Back','Next'],
+      navText: ['',''],
+      //navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+      dots: false,
+      dotsEach: true,
+      lazyLoad: false,
+      autoplay: true,
+      autoplaySpeed: 500,
+      navSpeed: 500,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+    }
+  );
+
+});
+
+</script>
+       
 
   <!--<div class="container">-->
      <div class="slider">  
        <ul class="slides" style="box-shadow: 5px 20px 35px rgba(50,50,93,0.1), 5px 10px 15px rgba(0,0,0,.07);">  
          <li>  
-           <img src="{% static 'images/4.jpg' %}">  
-              <!-- random image -->  
-           <div class="caption center-align">  
+           <img src="{% static 'images/4.jpg' %}"> 
+           
+          <div class="caption center-align">  
              <h3 style="color: #bababc">WELCOME TO TECH TAKSHILA</h3>  
              <h5 class="grey-text.text-darken-1">Slogan.</h5>  
            </div>  
          </li>  
          <li>  
-           <img src="{% static 'images/6.jpg' %}">  
-              <!-- random image -->  
-           <div class="caption center-align">  
+           <img src="{% static 'images/6.jpg' %}"> 
+         
+        <div class="caption center-align">  
              <h3 class="grey-text.text-darken-1">WELCOME TO TECH TAKSHILA</h3>    
              <h5 class="grey-text.text-darken-1">Slogan.</h5>  
           </div>  
         </li>  
         <li>  
-          <img src="{% static 'images/3.jpg' %}">  
-            <!-- random image -->  
+          <img src="{% static 'images/3.jpg' %}"> 
+         
           <div class="caption center-align">  
             <h3 style="color: #3b464f">WELCOME TO TECH TAKSHILA</h3>    
             <h5 style="color: #3b464f">Slogan.</h5>  
           </div>  
         </li>  
         <li>  
-          <img src="{% static 'images/5.jpg' %}">  
-            <!-- random image -->  
-         <div class="caption center-align">  
+          <img src="{% static 'images/5.jpg' %}">
+ 
+          <div class="caption center-align">  
             <h3 class="grey-text.text-darken-1">WELCOME TO TECH TAKSHILA</h3>    
             <h5 class="grey-text.text-darken-1">Slogan.</h5>  
          </div>  
         </li> 
 
-        <div class="subject-wrapper">
-          <div class="testimonial-carousel section-padding owl-carousel">
-
-            <div class="single-test">
-              <div class="img-area">
-                <img src="{% static 'images/book-icon.png' %}">
-              </div>
-              <div class="text-area">
-                <h6>Distributed System</h6>
-              </div>  
-            </div>
-
-            <div class="single-test">
-              <div class="img-area">
-                <img src="{% static 'images/book-icon.png' %}">
-              </div>
-              <div class="text-area">
-                <h6>System Design</h6>
-              </div>  
-            </div>
-
-            <div class="single-test">
-              <div class="img-area">
-                <img src="{% static 'images/book-icon.png' %}">
-              </div>
-              <div class="text-area">
-                <h6>Networking</h6>
-              </div>  
-            </div>
-
-            <div class="single-test">
-              <div class="img-area">
-                <img src="{% static 'images/book-icon.png' %}">
-              </div>
-              <div class="text-area">
-                <h6>Cloud Computing</h6>
-              </div>  
-            </div>
-
-            <div class="single-test">
-              <div class="img-area">
-                <img src="{% static 'images/book-icon.png' %}">
-              </div>
-              <div class="text-area">
-                <h6>Product Management</h6>
-              </div>  
-            </div>
-
-          </div>
-        </div>
       </ul>
       
      </div>
    <!--</div>--> 
 
-<!--        <div class="subject-wrapper">
+<!--<section id="main-slider">
+  <div class="owl-carousel owl-theme" style="height: 200px;">
+    <div><img src="{% static 'images/3.jpg' %}"></div>
+    <div><img src="(% static 'images/4.jpg' %}"></div>
+    <div><img src="{% static 'images/5.jpg' %}"></div>
+    <div><img src="{% static 'images/6.jpg' %}"></div>
+  </div>  
+</section>-->
+
+
+<section id="owl-1">
+  <div class="owl-carousel owl-theme">
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393; border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">Networking</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">Cloud Computing</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="{% url 'ds' %}">Distributive System</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Distributive System</span>
+          <p>A distributed system contains multiple nodes that are physically separate but linked together using the network. All the nodes in this system communicate with each other and handle processes in tandem. Each of these nodes contains a small part of the distributed operating system software.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">System Design</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">Product Management</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">Programming</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" style="background: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);">
+          <img class="activator" src="{% static 'images/book-icon.png' %}" style="display: block; margin: 50px 50px 50px 65px;  width: 50%; border: 1px solid #229393;border-radius: 99px;">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" style="font-size: 18px;"><a href="#">Data Structures</a><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+       <!-- <div class="subject-wrapper" style="margin-top: 300px;">
           <div class="testimonial-carousel section-padding owl-carousel">
 
             <div class="single-test">
@@ -133,7 +315,7 @@
                 <img src="{% static 'images/book-icon.png' %}">
               </div>
               <div class="text-area">
-                <h6>Distributed System</h6>
+                <a href="{% url 'ds' %}"><h6>Distributed System</h6></a>
               </div>  
             </div>
 
@@ -196,17 +378,17 @@
                 })
         </script>
 
-        
+       <!-- 
         <h3 class="subjects"style="margin-top: 400px;">SUBJECTS</h3>
         <div class="carousel" style="margin-top: 0px;">
            
            <a class="carousel-item" href="{% url 'course2' %}">
-             <div class="book-icons">
+             <div class="book-icons">-->
               <!--<div class="book-container">-->
-               <img src="{% static 'images/book-icon.png' %}" class="book-icons-img">
+               <!--<img src="{% static 'images/book-icon.png' %}" class="book-icons-img">-->
                <!--<img src="{% static 'images/book-hover.png' %}" class="book white-img">-->
               <!--</div>-->
-               <h6 class="book-icon-text">Distributed System</h6>
+              <!-- <h6 class="book-icon-text">Distributed System</h6>
              </div>
            </a>
 
@@ -218,7 +400,7 @@
 
            <a class="carousel-item" href="#five!"><div class="book-icons"><img src="{% static 'images/book-icon.png' %}" class="book-icons-img"><h6 class="book-icon-text">Cloud Computing</h6></div></a>
            
-        </div> 
+        </div> -->
         
 
   <script>
@@ -228,15 +410,51 @@
       const slider = document.querySelector('.slider');
     
       M.Slider.init(slider,{
-        indicators: true,
-        height: 450,
+        indicators: false,
+        height: 250,
         transition: 300,
         interval: 6000
       });
     })   
   </script>
+
+ <section id="feeds">
+  
+  <h3 class="feed-title">Our Feedbacks</h3>
+
+  <div class="feedback">
+    <div class="feedback-container">
+     <div class="feed-svg"> 
+      <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+     </div> 
+      <div class="feedback-content">“One of the best sites to learn.. the courses are really high quality.”</div>
+      <div class="feedback-owner"> - L. Carlos</div>
+      <div class="feedback-owner-position">Software Developer</div>
+    </div>
+
+    <div class="feedback-container">
+     <div class="feed-svg"> 
+      <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+     </div> 
+      <div class="feedback-content">“One of the best sites to learn.. the courses are really high quality.”</div>
+      <div class="feedback-owner"> - L. Carlos</div>
+      <div class="feedback-owner-position">Software Developer</div>
+    </div>
+
+    <div class="feedback-container">
+     <div class="feed-svg"> 
+      <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+     </div> 
+      <div class="feedback-content">“One of the best sites to learn.. the courses are really high quality.”</div>
+      <div class="feedback-owner"> - L. Carlos</div>
+      <div class="feedback-owner-position">Software Developer</div>
+    </div>
+
+  </div>
+
+</section>
       
-    <h3 class="subjects">TWITTER FEEDS</h3>
+   <!-- <h3 class="subjects">TWITTER FEEDS</h3>
     <div class="twitter" style="margin-top: 100px; border: 1px solid lightblue; margin-left: auto; margin-right: auto; display: block; width: 60%; padding: 60px 150px; background-image: linear-gradient(to bottom, #fff, #f2f2f2); box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); border-radius: 60px;">
       
       <div class="twitter-heading">
@@ -248,44 +466,44 @@
 
       <a class="twitter-timeline" data-lang="en" data-width="1200" data-height="400" href="https://twitter.com/TwitterDev/likes?ref_src=twsrc%5Etfw">Tweets Liked by @TwitterDev</a></div>
 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
-    <footer class="page-footer" style="background-color: #41af57; margin-top: 70px;">
+    <footer class="page-footer" style="background-color:rgb(243, 243, 247); margin-top: 70px; ">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
             
                   <img src="{% static 'images/Logo-2.png' %}" style="width: 13%; height: auto; display: block; float: left;"> 
-                  <h5 class="white-text" style="margin-left: 60px;">TECH TAKSHILA</h5>  
-                <p class="grey-text text-lighten-4">Tech Takshila</p>
-                <p class="grey-text text-lighten-4">techtakshila@gmail.com</p>
-                <p class="grey-text text-lighten-4">www.techtakshila.com</p>
+                  <h5 style="margin-left: 60px; color:rgb(75, 73, 255);">TECH TAKSHILA</h5>  
+                <p style="color:rgb(75, 73, 255);">Tech Takshila</p>
+                <p style="color:rgb(75, 73, 255);">techtakshila@gmail.com</p>
+                <p style="color:rgb(75, 73, 255);">www.techtakshila.com</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Connect Us</h5>
+                <h5 style="color:rgb(75, 73, 255);">Connect Us</h5>
                 <ul>
                   <li style="margin-top: 5px;">
                     <img src="{% static 'images/Twitter-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Twitter</a>
+                    <a href="#!" style="color:rgb(75, 73, 255);margin-left: 15px;">Twitter</a>
                   </li>
                   <li style="margin-top: 5px;">
                     <img src="{% static 'images/linkedin-icon.png' %}" style="width: 8%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">LinkedIn</a>
+                    <a href="#!" style="color:rgb(75, 73, 255);margin-left: 15px;">LinkedIn</a>
                   </li>
                   <li style="margin-top: 5px;">
                     <img src="{% static 'images/facebook-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Facebbok</a>
+                    <a href="#!" style="color:rgb(75, 73, 255);margin-left: 15px;">Facebbok</a>
                   </li>
                   <li style="margin-top: 5px;">
                     <img src="{% static 'images/instagram-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Instagram</a>
+                    <a href="#!" style="color:rgb(75, 73, 255);margin-left: 15px;">Instagram</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">
+            <div class="container" style="color:rgb(75, 73, 255);">
             © 2019 Copyright Text
             </div>
           </div>
