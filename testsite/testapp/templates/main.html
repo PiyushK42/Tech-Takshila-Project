@@ -40,7 +40,7 @@
  <style>
 
 @media screen and (max-width: 450px){
-  .nav-wrapper .brand-logo {margin-left: 0px;}
+  .nav-wrapper .logo {margin-left: 0px;}
 }
 
 </style>
@@ -48,8 +48,8 @@
 
    <nav>
     <div class="nav-wrapper" style="background-color: rgb(243, 243, 247); border-bottom: 1px solid rgb(201, 200, 255); border-top: 1px solid rgb(201, 200, 255);">
-      <a href="{% url 'index' %}" class="brand-logo"><img src="{% static 'images/Logo-2.png' %}" class="logo" style="margin-left: 75px; height: 58px;"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: rgb(201, 200, 255);">menu</i></a>
+      <a href="{% url 'index' %}"><img src="{% static 'images/Logo-2.png' %}" class="logo"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down" style=" margin-right: 75px;">
         <li style="display: inline-block;
   vertical-align: middle;"><a href="#" style="color: rgb(75, 73, 255);/*2.#000;/*#07022d;*/;

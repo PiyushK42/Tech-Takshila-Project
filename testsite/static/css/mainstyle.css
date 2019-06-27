@@ -1,22 +1,17 @@
 .topnav {
-    /*background-color: #e2deed/*#e0daf2 fake violet*/ /*#83c18e fake dark-green */ /*#41af57 green */ ;
-    /*1.background: linear-gradient(to bottom,#fff 0,#e2deed 100%);*/
-    /*2.background-color: #fff;*/
     background-color: rgb(243, 243, 247);
-    /*background-color: linear-gradient(to bottom,#fff 0,#e2deed 100%);*/
     overflow: hidden;
-    /*box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07);*/
     border-bottom: 2px solid rgb(201, 200, 255);
     border-top: 1px solid rgb(201, 200, 255);
 }
 
 img.logo {
    float: left;
-   margin-left: 75px;
+   margin-left: 5%;
    height: auto;
    width: auto;
    max-width: 250px;
-   max-height: 80%;
+   max-height: 100%;
    vertical-align: middle;
 }
 
@@ -37,7 +32,7 @@ img.logo {
 
 .nav-right li a {
   float: right;
-  color: rgb(75, 73, 255);/*2.#000;/*#07022d;*/;
+  color: rgb(75, 73, 255);
   text-align: center;
   padding: 8px 12px;
   text-decoration: none;
@@ -50,9 +45,9 @@ img.logo {
 }
 
 .nav-right li a:hover {
-  background-color: rgb(75, 73, 255)/*3.#757577/*2.#0b090c/*1.#5c4c72/*#07022d*/;
-  color: #fff/*#8f26cc*/ /*#0fbc00 parrot green*/;
-  border-color: rgb(75, 73, 255)/*2.#000/*1.#5c4c72*/;
+  background-color: rgb(75, 73, 255)
+  color: #fff
+  border-color: rgb(75, 73, 255)
 }
 
 .book-icons {
@@ -116,15 +111,6 @@ img.logo {
   text-shadow: 2px 2px 4px #98b79c;
   margin-top: 100px;
   margin-bottom: 0px;
-}
-
-.subjectname {
-  color: #606066/*1.#5fa869*/;
-  text-shadow: 2px 2px 4px #c4c4c4;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  margin-left: 60px;
-  font-size: 18px;
 }
 
 .chapter {
@@ -616,3 +602,13 @@ iframe.content {
    font-size: 18px; 
    margin: 30px 0px 15px;
  }
+
+ .subjectname {
+  color: #606066;
+  text-shadow: 2px 2px 4px #c4c4c4;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 5%;
+  font-size: 18px;
+}
+
