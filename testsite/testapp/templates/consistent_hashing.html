@@ -5,20 +5,18 @@
   <meta charset="utf-8">
   <title>Consistent Hashing</title>
    
-  <!--<link rel="stylesheet" href="https://d3kxw7nmigeyyt.cloudfront.net/static/css/style.css"/>-->
-  <!--<link rel="stylesheet" href="{% static 'css/distributed-system/consistent-hashing/style.css' %}">-->
+  <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
-
+   
+  <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
+  <!-- Custom CSS-->
   <link rel="stylesheet" href="{% static 'css/Distributed_System/style.css' %}">
-
   <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
-
-  <link rel="stylesheet" type="text/css" href="{% static 'css/vs.css' %}">
-
 
   <body class="content">
 
@@ -39,9 +37,7 @@
     <h5>I. Load Balancing:</h5>
     <p>One of the areas in which consistent hashing is used is in load balancers where web requests are distributed across servers. Consistent Hashing works by mapping of keys (i.e., requestIds) and servers(using serverIds) on a ring. The load balancing system uses the unique identifier of the web-requests to find the location of the request on the edge of the circle; after that, the system walks around the ring until it encounters the first server. As a result of this, each server gets all the requests whose requestIds fall after the previous server located on the ring.</p>
 
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure1.png' %}" class="Image">-->
-
-    <img src="{% static 'images/Figure1.png' %}" class="Image">
+    <img src="{% static 'images/distributed-system/consistent-hashing/Figure1.png' %}" class="Image">
 
     <p align="middle" class="figure-title"><i>Fig 1: Load balancing using consistent hashing</i></p>
 
@@ -49,16 +45,13 @@
 
     <p>If a server becomes unavailable, then the requests which would have mapped to that server get redirected to the next server on the circle.</p>
 
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure2.png' %}" class="Image">-->
-    <img src="{% static 'images/Figure2.png' %}" class="Image">
+    <img src="{% static 'images/distributed-system/consistent-hashing/Figure2.png' %}" class="Image">
 
     <p align="middle"><i>Fig 2: Server S3 dies, request R5 gets redirected to S4</i></p>
 
     <p>When a server gets added a similar process gets executed, and the requests which were initially directed to the server at the next higher angle will start getting directed to the new server.</p>
 
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure3.png' %}" class="Image">-->
-
-    <img src="{% static 'images/Figure3.png' %}" class="Image">
+    <img src="{% static 'images/distributed-system/consistent-hashing/Figure3.png' %}" class="Image">
 
     <p align="middle"><i>Fig 3: Server S5 comes back up, request R5 now gets redirected to S5</i></p>
 
@@ -74,17 +67,13 @@
 
     <p>Each server maintains a dictionary for storing caches, as shown in the image below. The server does a lookup of the cache using the key when a request gets directed to that server.</p>
 
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure4.png' %}" class="Image2">-->
-
-    <img src="{% static 'images/Figure4.png' %}" class="Image2">
+    <img src="{% static 'images/distributed-system/consistent-hashing/Figure4.png' %}" class="Image2">
 
     <p align="middle"><i>Fig 4: Caches distributed among servers with replicas</i></p>
 
     <p>In case any of the servers goes down, any request to fetch cache stored on that server will be directed to the next server on the circle (in this implementation).</p>
 
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure5.png' %}" class="Image2">-->
-
-    <img src="{% static 'images/Figure5.png' %}" class="Image2">
+    <img src="{% static 'images/distributed-system/consistent-hashing/Figure5.png' %}" class="Image2">
 
     <p align="middle"><i>Fig 5: S3 goes down, request for key3 now  gets redirected to S4</i></p>
 
