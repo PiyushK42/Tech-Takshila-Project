@@ -5,6 +5,7 @@
 {% load staticfiles %}
 <html>
 <head>
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subject</title>
@@ -14,470 +15,171 @@
   <link rel="stylesheet" href="{% static 'css/Distributed_System/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
  </head> 
+
 <body>
 
-	<div class="subject-func">	
-	  <h5 class="subjectname">DISTRIBUTED SYSTEM</h5>
-      <btn onclick="openNav()" class="btn show_btn" id="HideShow" style="margin-left: 5%;"><i class="material-icons">menu</i></btn>
-    </div>
+  <div class="subject-func">	
+	<h5 class="subjectname">DISTRIBUTED SYSTEM</h5>
+    <btn onclick="openNav()" class="btn show_btn" id="HideShow" style="margin-left: 5%;"><i class="material-icons">menu</i></btn>
+  </div>
 
 
-<section id="subject-topics">	
-  <div class="subject-cont" style="margin-top: 10px; border-top: 4px solid rgb(201, 200, 255); border-bottom: 4px solid rgb(201, 200, 255);">
-	<div id="mySidebar" class="sidebar">
-      <div class="subject-bar" id="sub1" style="background: #fff; display: flex; flex-direction: column; position: relative; flex: 0 1 300px; padding: 0px 15px 0px;" >
-   		<h5 class="subject-module" style="color: black; font-weight: bold; font-size: 18px; margin: 30px 0px 15px;">CHAPTERS</h5>
-   		<div class="bar-design" style="border: 0px; background-color: rgb(201, 200, 255); margin: 0px 0px 15px; height: 5px; max-width: 250px;border-radius: 1000px;">
-   			<span>&nbsp</span>
-   		</div>
+ <section id="subject-topics">
 
-      <div class="subject-1" style="overflow-y: auto; flex: 1 1 auto; margin: 4px -15px 0px; padding: 0px 15px 0px; list-style: none;">
-        <div class="subject-modules-name" style="display: flex; flex-direction: column; margin-left: 12px; margin-right: 12px; margin-bottom: 30px; flex: 0 0 auto;">
+  <div class="subject">
 
-        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-        		 		</g>
-        		 	</g>
-        		 </svg> 
-        		</div>
-        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;" {% if request.path == content %}class="active"{% endif %}>
+	<div class="sidebar" id="mySidebar">
+
+      <div class="subject-bar" id="sub1">
+
+   		<h5 class="subject-module">CHAPTERS</h5>
+   		<div class="bar-design"><span>&nbsp</span></div>
+        
+        <!--TOPIC-LIST-DIV-->
+        <div class="subject-topic-bar">
+
+          <div class="subject-topic-subbar">
+           
+           <!--TOPIC NAME DIV-->
+        	<div class="subject-topic">
+
+        	  <div class="topic-bullet"> <!-- BULLETS DIV -->
+        		<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		 <g id="bullet" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
+        		  <g id="bullet-formation" transform="translate(-135.000000, -351.000000)" stroke="#979797">
+        		 	<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
+        		  </g>
+        		 </g>
+        		</svg> 
+        	  </div>  <!-- END OF BULLETS DIV -->
+
+        		<a class="topic-name" href="{% url 'content' %}" target="test1">
         			<div><span>CAP Theorem</span></div>
         		</a>	
         	</div>
+            <!-- END OF TOPIC NAME DIV-->
+            
+            <!--TOPIC NAME DIV-->
+        	<div class="subject-topic">
 
-        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-        		 		</g>
+        	 <div class="topic-bullet">  <!-- BULLETS DIV -->
+        		<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+        		  <g id="bullet" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
+        		 	<g id="bullet-formation" transform="translate(-135.000000, -351.000000)"stroke="#979797">
+        		 	  <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
         		 	</g>
-        		 </svg> 
-        		</div>
-        		<a class="subject-modules-name-3" href="{% url 'chapter2' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;" {% if request.path == chapter2 %}class="active"{% endif %}>
+        		  </g>
+        		</svg> 
+        	 </div>  <!-- END OF BULLETS DIV -->
+
+        		<a class="topic-name" href="{% url 'chapter2' %}" target="test1">
         			<div><span>Consistent Hashing</span></div>
         		</a>	
-        	</div>
+            </div>
+            <!-- END OF TOPIC NAME DIV-->
 
-        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-        		 		</g>
-        		 	</g>
-        		 </svg> 
-        		</div>
-        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-        			<div><span>Sharding</span></div>
-        		</a>	
-        	</div>
+            <!--TOPIC NAME DIV-->
+            <div class="subject-topic">
 
-        	<div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; /*border-left: 1px solid rgb(78, 189, 211);*/">
-        		<div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-        		 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-        		 	<g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-        		 		<g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-        		 			<circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-        		 		</g>
-        		 	</g>
-        		 </svg> 
-        		</div>
-        		<a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-        			<div><span>Consistency</span></div>
-        		</a>	
-        	</div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
+             <div class="topic-bullet"> <!-- BULLETS DIV -->
+                <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+                  <g id="bullet" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
+                    <g id="bullet-formation" transform="translate(-135.000000, -351.000000)"stroke="#979797">
+                      <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
                     </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
+                  </g>
+                </svg> 
+             </div>  <!-- END OF BULLETS DIV -->
+
+                <a class="topic-name" href="{% url 'content' %}" target="test1">
                     <div><span>Sharding</span></div>
                 </a>    
             </div>
+            <!-- END OF TOPIC NAME DIV-->
 
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
+            <!--TOPIC NAME DIV-->
+            <div class="subject-topic">
+
+             <div class="topic-bullet">  <!-- BULLETS DIV -->
+                <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
+                  <g id="bullet" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd">
+                    <g id="bullet-formation" transform="translate(-135.000000, -351.000000)"stroke="#979797">
+                      <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
                     </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
+                  </g>
+                </svg> 
+             </div>  <!-- END OF BULLETS DIV -->
+
+                <a class="topic-name" href="{% url 'content' %}" target="test1">
+                    <div><span>Consistency</span></div>
                 </a>    
             </div>
+            <!-- END OF TOPIC NAME DIV-->
+           
+          </div> <!-- end of div "subject-topic-subbar" -->
+       
+         </div>  <!-- end of div "subject-topic-bar" -->
 
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-
-            <div class="subject-modules-name-2" style="display: flex; flex-wrap: nowrap; -webkit-box-pack: start; justify-content: flex-start; align-items: flex-start; padding: 12px 0px; overflow: visible; border-left: 1px solid rgb(78, 189, 211);">
-                <div class="subject-bullet" style="flex: 0 0 auto; margin: -16px 0px 0px -6px;">
-                 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1">
-                    <g id="subject-bullet-1" stroke="none" stroke-width="1" fill="white" fill-rule="evenodd" style="overflow: hidden;">
-                        <g id="subject-bullet-2" transform="translate(-135.000000, -351.000000)" stroke="#979797">
-                            <circle id="Oval-10" cx="140.5" cy="357" r="5" stroke="rgb(78, 189, 211)"></circle>
-                        </g>
-                    </g>
-                 </svg> 
-                </div>
-                <a class="subject-modules-name-3" href="{% url 'content' %}" target="test1" style="font-size: 16px; flex: 0 1 auto; margin: -16px 4px auto 18px; text-decoration: none; overflow: hidden; transition: all 0.2s ease 0s; color: black;">
-                    <div><span>Sharding</span></div>
-                </a>    
-            </div>
-            
-          </div>
-         </div>
+         <!--END OF TOPIC LIST DIV-->
              
-        </div>
-    </div> 
+      </div>   <!-- end of div "subject-bar" -->
 
-    <script>
+    </div>    <!-- end of div "sidebar" -->
+        
+
+        <!-- Script for Darkening the active topic of subject -->
+        <script>
         	$(document).ready(function () {
-               $('.subject-modules-name .subject-modules-name-2 a div').find('span').click(function () {
+               $('.subject-topic-subbar .subject-topic a div').find('span').click(function () {
                  //removing the previous selected menu state
-               $('.subject-modules-name .subject-modules-name-2 a div').find('span.active').removeClass('active');
+               $('.subject-topic-subbar .subject-topic a div').find('span.active').removeClass('active');
                  //adding the state for this selected menu
                $(this).addClass('active');
               });
             });
         </script>
-
-   <style>
-   	.sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 250px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 148px;
-  left: 0;
-  background-color: #fff; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 0px; /* Place content 60px from the top */
-  transition: 0.5s;
-  border-right: 1px solid rgb(201, 200, 255);
-  /*border-top: 3px solid rgb(223, 223, 223);*/
-   /* 0.5 second transition effect to slide in the sidebar */
-}
-
-.subject-1 {
-  	height: 432px;
-  }
-
-/* The sidebar links */
-.sidebar a {
-  padding: 0px 8px 0px 8px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-
-/* Position and style the close button (top right corner) */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* The button used to open the sidebar */
-.openbtn {
-  cursor: pointer;
-  position: absolute;
-  background-color: #fff;
-  color: rgb(201, 200, 255);
-  left: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-}
-
-.openbtn:hover {
-  color: rgb(75, 73, 255);
-}
-
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 0px;
-}
-
-
-@media screen and (max-width: 450px) and (max-height: 667px){
-	.sidebar {top: 144px; width: 100%;}
-	.subjectname {font-size: 17px; margin-left: 20px; margin-top: 15px;}
-	.subject-1 {height: 330px;}
-	#main iframe{height: 420px;}
-}
-
-@media screen and (max-width: 450px) and (min-height: 700px){
-	.sidebar { top: 144px; width: 100%;}
-	.subjectname {font-size: 17px; margin-left: 20px; margin-top: 15px;}
-}
-
-@media screen and (min-height: 800px) {
-  #mySidebar .subject-bar .subject-1 {height: 560px;}
-  #main iframe{height: 650px;} 	
-}
-   </style>
-
-   <script>
-   	function openNav() {
-   	 if (document.getElementById("test1").style.width === "100%"){
-   	 	var width = window.innerWidth;
-   	 	if (width <= 450){
-   	 		document.getElementById("mySidebar").style.width = "100%";
-            document.getElementById("main").style.marginLeft = "100%";
-            document.getElementById("test1").style.width =  "0";
-   	 	  }
-   	 	else {  
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.getElementById("test1").style.width =  "80.7%";
-         }   
+       
+       <!-- Script for Opening and Closing Subject Nav-bar -->
+       <script>
+   	    function openNav() {
+   	      if (document.getElementById("test1").style.width === "100%"){
+   	 	   var width = window.innerWidth;
+   	 	     if (width <= 450){
+   	 		    document.getElementById("mySidebar").style.width = "100%";
+                document.getElementById("topic-content").style.marginLeft = "100%";
+                document.getElementById("test1").style.width =  "0";
+   	 	     }
+   	 	    else {  
+               document.getElementById("mySidebar").style.width = "250px";
+               document.getElementById("topic-content").style.marginLeft = "250px";
+               document.getElementById("test1").style.width =  "80.7%";
+             }   
+          }
+        else{
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("topic-content").style.marginLeft = "0";
+              document.getElementById("test1").style.width =  "100%";
+          }
        }
-     else{
-       document.getElementById("mySidebar").style.width = "0";
-       document.getElementById("main").style.marginLeft = "0";
-       document.getElementById("test1").style.width =  "100%";
 
-     }
-   }
+      </script>
+    
+    <!-- TOPIC CONTENT -->
+    <div id="topic-content"> 
+      <iframe src="{% url 'content' %}" height="515" width="80.7%" frameborder="0" name="test1" id="test1" class="content">
+   	  </iframe> 
+    </div>
 
-    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-    //function closeNav() {
-      //document.getElementById("mySidebar").style.width = "0";
-      //document.getElementById("main").style.marginLeft = "0";
-      //document.getElementById("test1").style.width =  "100%";
-    //}
-   </script>
+     <style>
+       body, html {width: 100%; margin: 0px; padding: 0; overflow: hidden;}
+     </style>
+    <!-- END OF TOPIC CONTENT --> 
 
+  </div>   <!-- end of div "subject" --> 
 
-   <div id="main"> 
-     	<iframe src="{% url 'content' %}" height="515" width="80.7%" frameborder="0" name="test1" id="test1" class="content">
-   	</iframe> 
-   </div>
-
-   <style>
-   body, html {width: 100%; margin: 0px; padding: 0; overflow: hidden;}
-   	#main {
-      overflow:hidden; width:100%; margin-left: 250px;
-   	}
-   </style>
-</div>
-</section>
+ </section>  <!-- end of section "subject-topics" -->
 
 </body>
+
 </html>
 {% endblock %}

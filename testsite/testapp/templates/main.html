@@ -24,116 +24,50 @@
     <!--jQuery-->
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <!--<script type = "text/javascript"  
-         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+
 <body>
   
-  <!--
-   <div class="topnav">
-     <a href="{% url 'index' %}"><img src="{% static 'images/Logo-2.png' %}" class="logo"></a>
-     <ul class="nav-right">
-       <li><a href="#">ABOUT US</a></li>
-       <li><a href="#">FAQ</a><li>
-       <li><a href="#">CONTACT US</a><li>
-   </div>-->
- 
- <style>
-
-@media screen and (max-width: 450px){
-  .nav-wrapper .logo {margin-left: 0px;}
-}
-
-</style>
-
-
+   <!-- Navigation Bar -->
    <nav>
+    
     <div class="nav-wrapper" style="background-color: rgb(243, 243, 247); border-bottom: 1px solid rgb(201, 200, 255); border-top: 1px solid rgb(201, 200, 255);">
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: rgb(201, 200, 255);">menu</i></a>
-      <a href="{% url 'index' %}"><img src="{% static 'images/Logo-2.png' %}" class="logo"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down" style=" margin-right: 75px;">
-        <li style="display: inline-block;
-  vertical-align: middle;"><a href="#" style="color: rgb(75, 73, 255);/*2.#000;/*#07022d;*/;
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 15px;
-  transition: 0.6s ease;">ABOUT US</a></li>
-        <li style="display: inline-block;
-  vertical-align: middle;"><a href="#" style="color: rgb(75, 73, 255);/*2.#000;/*#07022d;*/;
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 15px;
-  transition: 0.6s ease;">FAQ</a></li>
-        <li style="display: inline-block;
-  vertical-align: middle;"><a href="#" style="color: rgb(75, 73, 255);/*2.#000;/*#07022d;*/;
-  text-align: center;
-  padding: 0px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 15px;
-  transition: 0.6s ease;">CONTACT US</a></li>
-      </ul>
-    </div>
-  </nav>
 
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: rgb(201, 200, 255);">menu</i></a>
+
+      <a href="{% url 'index' %}"><img src="{% static 'images/Logo-2.png' %}" class="logo"></a>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down" style=" margin-right: 75px;">
+
+        <li class="nav-list"><a href="#">ABOUT US</a></li>
+        <li class="nav-list"><a href="#">FAQ</a></li>
+        <li class="nav-list"><a href="#">CONTACT US</a></li>
+
+      </ul>
+
+    </div> <!-- end of div class "nav-wrapper" -->
+
+  </nav>
+  <!--  End of Navigation Bar -->
+
+
+   <!-- Side Navigation for small screen -->
    <ul class="sidenav" id="mobile-demo">
     <li><a href="#">ABOUT US</a></li>
     <li><a href="#">FAQ</a></li>
     <li><a href="#">CONTACT US</a></li>
-  </ul>
+   </ul>
+   <!-- end of Side Nav -->
 
-   <script type="text/javascript">
-     $(document).ready(function(){
-        $('.sidenav').sidenav();
-  });
-   </script>
 
     {% block content %}
     {% endblock %}
-
-   <!--<footer class="page-footer" style="background-color: #41af57; margin-top: 70px;">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-            
-                  <img src="{% static 'images/Logo-2.png' %}" style="width: 13%; height: auto; display: block; float: left;"> 
-                  <h5 class="white-text" style="margin-left: 60px;">TECH TAKSHILA</h5>  
-                <p class="grey-text text-lighten-4">Tech Takshila</p>
-                <p class="grey-text text-lighten-4">techtakshila@gmail.com</p>
-                <p class="grey-text text-lighten-4">www.techtakshila.com</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Connect Us</h5>
-                <ul>
-                  <li style="margin-top: 5px;">
-                    <img src="{% static 'images/Twitter-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Twitter</a>
-                  </li>
-                  <li style="margin-top: 5px;">
-                    <img src="{% static 'images/linkedin-icon.png' %}" style="width: 8%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">LinkedIn</a>
-                  </li>
-                  <li style="margin-top: 5px;">
-                    <img src="{% static 'images/facebook-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Facebbok</a>
-                  </li>
-                  <li style="margin-top: 5px;">
-                    <img src="{% static 'images/instagram-icon.png' %}" style="width: 7%; height: auto; display: block; float: left;">
-                    <a class="grey-text text-lighten-3" href="#!" style="margin-left: 15px;">Instagram</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2019 Copyright Text
-            </div>
-          </div>
-        </footer>-->
+    
+    <!-- Script for Side Nav -->
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $('.sidenav').sidenav();
+     });
+   </script>
 
 </body>
 </html>	

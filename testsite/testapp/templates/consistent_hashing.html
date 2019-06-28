@@ -4,68 +4,101 @@
 <head>
   <meta charset="utf-8">
   <title>Consistent Hashing</title>
-   <!--<link rel="stylesheet" href="https://site-static-files-storage.s3.ap-south-1.amazonaws.com/static/css/style.css?"/> -->
-
+   
   <!--<link rel="stylesheet" href="https://d3kxw7nmigeyyt.cloudfront.net/static/css/style.css"/>-->
   <!--<link rel="stylesheet" href="{% static 'css/distributed-system/consistent-hashing/style.css' %}">-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <link rel="stylesheet" href="{% static 'css/Distributed_System/style.css' %}">
+
   <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+
   <link rel="stylesheet" type="text/css" href="{% static 'css/vs.css' %}">
 
-<body class="content-1" style="padding: 10px;">
-  <header>
-    <h3 align="middle" style="margin-top: 20px; margin-bottom: 20px; font-family: 'Avenir Black' !important; font-weight: bold;">Consistent Hashing</h3>
 
-  </header>
-  <main> 
-   <div class="block-content" style="padding: 20px 10px 50px; font-family: 'Avenir Black' !important; margin-bottom: 30px; margin-left: 50px; margin-right: 50px; border-top: 1px solid rgb(223, 223, 223); border-bottom: 1px solid rgb(223, 223, 223);">
-    <h5 style="margin-top: 10px; font-weight: bold;">Problem Statement:</h5>
-    <p style="font-size: 20px;">In traditional hash tables, a change in the number of array slots causes nearly all the keys are remapped. However, using consistent hashing whenever the hash table is resized only a small portion of the keys are remapped. Consistent hashing maps objects to the same cache machine, as far as possible. It means when a cache machine is added, it takes its share of objects from all the other cache machines, and when it is removed, its objects are shared among the remaining machines. The main idea behind the consistent hashing algorithm is to associate each cache with one or more hash value intervals where the interval boundaries are determined by calculating the hash of each cache identifier. If the cache is removed, its range is taken over by a cache with a next interval. All the remaining caches are unchanged.</p>
-    <h5 style="margin-top: 50px; font-weight: bold;">Historical Background:</h5>
-    <p style="font-size: 20px;">The term “consistent hashing” was introduced in an academic paper from 1997 as a way of distributing requests among a changing population of Web servers. The authors of this paper founded Akamai Technologies a year later, which gave birth to the content delivery network industry.</p>
-    <h5 style="margin-top: 50px; font-weight: bold;"><u>Applications of Consistent Hashing:</u></h5>
-    <h5 style="margin-top: 30px; font-weight: bold;">I. Load Balancing:</h5>
-    <p style="font-size: 20px;">One of the areas in which consistent hashing is used is in load balancers where web requests are distributed across servers. Consistent Hashing works by mapping of keys (i.e., requestIds) and servers(using serverIds) on a ring. The load balancing system uses the unique identifier of the web-requests to find the location of the request on the edge of the circle; after that, the system walks around the ring until it encounters the first server. As a result of this, each server gets all the requests whose requestIds fall after the previous server located on the ring.</p>
+  <body class="content">
+
+    <h3 align="middle">Consistent Hashing</h3>
+
+   <div class="block-content">
+
+    <h5>Problem Statement:</h5>
+
+    <p>In traditional hash tables, a change in the number of array slots causes nearly all the keys are remapped. However, using consistent hashing whenever the hash table is resized only a small portion of the keys are remapped. Consistent hashing maps objects to the same cache machine, as far as possible. It means when a cache machine is added, it takes its share of objects from all the other cache machines, and when it is removed, its objects are shared among the remaining machines. The main idea behind the consistent hashing algorithm is to associate each cache with one or more hash value intervals where the interval boundaries are determined by calculating the hash of each cache identifier. If the cache is removed, its range is taken over by a cache with a next interval. All the remaining caches are unchanged.</p>
+
+    <h5>Historical Background:</h5>
+
+    <p>The term “consistent hashing” was introduced in an academic paper from 1997 as a way of distributing requests among a changing population of Web servers. The authors of this paper founded Akamai Technologies a year later, which gave birth to the content delivery network industry.</p>
+
+    <h5><u>Applications of Consistent Hashing:</u></h5>
+
+    <h5>I. Load Balancing:</h5>
+    <p>One of the areas in which consistent hashing is used is in load balancers where web requests are distributed across servers. Consistent Hashing works by mapping of keys (i.e., requestIds) and servers(using serverIds) on a ring. The load balancing system uses the unique identifier of the web-requests to find the location of the request on the edge of the circle; after that, the system walks around the ring until it encounters the first server. As a result of this, each server gets all the requests whose requestIds fall after the previous server located on the ring.</p>
+
     <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure1.png' %}" class="Image">-->
+
     <img src="{% static 'images/Figure1.png' %}" class="Image">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 1: Load balancing using consistent hashing</i></p>
-    <p style="margin-top: 30px; font-size: 20px;">In the example above, the servers(S1...S4) and requests(R1...R6) are circularly hashed on the same range. We can see that the requests R1 and R2 are directed to server S1, R3 and R4 to S2, R5 to S3 and so on.</p>
-    <p style="font-size: 20px;">If a server becomes unavailable, then the requests which would have mapped to that server get redirected to the next server on the circle.</p>
+
+    <p align="middle" class="figure-title"><i>Fig 1: Load balancing using consistent hashing</i></p>
+
+    <p>In the example above, the servers(S1...S4) and requests(R1...R6) are circularly hashed on the same range. We can see that the requests R1 and R2 are directed to server S1, R3 and R4 to S2, R5 to S3 and so on.</p>
+
+    <p>If a server becomes unavailable, then the requests which would have mapped to that server get redirected to the next server on the circle.</p>
+
     <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure2.png' %}" class="Image">-->
     <img src="{% static 'images/Figure2.png' %}" class="Image">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 2: Server S3 dies, request R5 gets redirected to S4</i></p>
-    <p style="margin-top: 30px; font-size: 20px;">When a server gets added a similar process gets executed, and the requests which were initially directed to the server at the next higher angle will start getting directed to the new server.</p>
+
+    <p align="middle"><i>Fig 2: Server S3 dies, request R5 gets redirected to S4</i></p>
+
+    <p>When a server gets added a similar process gets executed, and the requests which were initially directed to the server at the next higher angle will start getting directed to the new server.</p>
+
     <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure3.png' %}" class="Image">-->
+
     <img src="{% static 'images/Figure3.png' %}" class="Image">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 3: Server S5 comes back up, request R5 now gets redirected to S5</i></p>
-    <h5 style="margin-top: 50px; margin-left: 40px; font-weight: bold;">Simulation:</h5>
+
+    <p align="middle"><i>Fig 3: Server S5 comes back up, request R5 now gets redirected to S5</i></p>
+
+    <h5 class="code-title">Simulation:</h5>
      
   
-    <iframe src="{% url 'simulation-load-balancing' %}" height="370" width="85%" frameborder="0" id="simulation" style="margin-left: 5px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px 0px; border-left: 5px solid rgb(201, 200, 255);">
+    <iframe src="{% url 'simulation-load-balancing' %}" height="370" width="85%" frameborder="0" class="code">
     </iframe>
     
-    <h5 style="margin-top: 60px; font-weight: bold;">II. Distributed Caching:</h5>
-    <p style="font-size: 20px;">We use consistent hashing to enable distributed caching where the caches are stored across multiple hosts. We create replicas of a cache on multiple servers so that the cache can be retrieved even if one of the servers fails. There are numerous ways of selecting the servers on which cache replicas can be stored. In this example, we have created replicas of the cache on the next two successors of the server on which the request was initially directed to. However, there can be more robust strategies for replicating caches; one such approach can be the usage of finger table as used in Chord protocol.</p>
-    <p style="font-size: 20px;">Each server maintains a dictionary for storing caches, as shown in the image below. The server does a lookup of the cache using the key when a request gets directed to that server.</p>
-  <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure4.png' %}" class="Image2">-->
-  <img src="{% static 'images/Figure4.png' %}" class="Image2">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 4: Caches distributed among servers with replicas</i></p>
-    <p style="margin-top: 40px; font-size: 20px;">In case any of the servers goes down, any request to fetch cache stored on that server will be directed to the next server on the circle (in this implementation).</p>
-    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure5.png' %}" class="Image2">-->
-    <img src="{% static 'images/Figure5.png' %}" class="Image2">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 5: S3 goes down, request for key3 now  gets redirected to S4</i></p>
-    <h5 style="margin-top: 50px; margin-left: 40px; font-weight: bold;">Simulation:</h5>
+    <h5 style="margin-top: 60px;">II. Distributed Caching:</h5>
 
-    <iframe src="{% url 'simulation-distributed-caching' %}" frameborder="0" height="370" width="85%" class="code" style="margin-left: 5px; background-color: rgb(243, 243, 247)/*1.#effff0*/; box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,.07); padding: 10px 0px 0px; border-left: 5px solid rgb(201, 200, 255);">
+    <p>We use consistent hashing to enable distributed caching where the caches are stored across multiple hosts. We create replicas of a cache on multiple servers so that the cache can be retrieved even if one of the servers fails. There are numerous ways of selecting the servers on which cache replicas can be stored. In this example, we have created replicas of the cache on the next two successors of the server on which the request was initially directed to. However, there can be more robust strategies for replicating caches; one such approach can be the usage of finger table as used in Chord protocol.</p>
+
+    <p>Each server maintains a dictionary for storing caches, as shown in the image below. The server does a lookup of the cache using the key when a request gets directed to that server.</p>
+
+    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure4.png' %}" class="Image2">-->
+
+    <img src="{% static 'images/Figure4.png' %}" class="Image2">
+
+    <p align="middle"><i>Fig 4: Caches distributed among servers with replicas</i></p>
+
+    <p>In case any of the servers goes down, any request to fetch cache stored on that server will be directed to the next server on the circle (in this implementation).</p>
+
+    <!--<img src="{% static 'images/distributed-system/consistent-hashing/Figure5.png' %}" class="Image2">-->
+
+    <img src="{% static 'images/Figure5.png' %}" class="Image2">
+
+    <p align="middle"><i>Fig 5: S3 goes down, request for key3 now  gets redirected to S4</i></p>
+
+    <h5 class="code-title">Simulation:</h5>
+
+    <iframe src="{% url 'simulation-distributed-caching' %}" frameborder="0" height="370" width="85%" class="code">
     </iframe>
    </div> 
-  </main> 
-
+    
+    <!-- Buttons for Previous-Next Functionality -->
     <div class="prev-next-functionality">
-      <div class="prev-next-functionality-2">
+
+      <div class="prev-next-sub">
+
         <a class="prev" href="{% url 'content' %}">
           <em>← Previous</em>
           <span>CAP Theorem</span>
@@ -75,12 +108,10 @@
           <em>Next →</em>
           <span>Sharding</span>
         </a>
-      </div>
-     </div>
 
-      <script>
+      </div> <!-- end of div class "prev-next-functionality" -->
 
-     </script>
+    </div> <!-- end of div class "prev-next-sub" -->
 
-</body>
+  </body>
 </html>

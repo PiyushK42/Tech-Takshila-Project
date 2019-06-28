@@ -8,56 +8,74 @@
   <link rel="stylesheet" href="{% static 'css/Distributed_System/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
 </head>  
-<body class="content-1" style="padding: 10px;">
-	<h3 align="middle" style="margin-top: 30px; margin-bottom: 20px; font-family: 'Avenir Black' !important; font-weight: bold;">CAP Theorem</h3>
 
-	<div class="block-content" style="padding: 20px 10px 50px; font-family: 'Avenir Black' !important; margin-bottom: 30px; margin-left: 50px; margin-right: 50px; border-top: 1px solid rgb(223, 223, 223); border-bottom: 1px solid rgb(223, 223, 223);">
+<body class="content">
 
-    <h5 style="margin-top: 10px; font-weight: bold;">Overview:</h5>
-    <p style="font-size: 20px;">CAP states that it is impossible for a distributed system to offer more than two out of the following guarantees:</p>
-    <ul style="list-style-type:disc; font-size: 20px; ">
+	<h3 align="middle">CAP Theorem</h3>
+
+	<div class="block-content">
+
+    <h5>Overview:</h5>
+
+    <p>CAP states that it is impossible for a distributed system to offer more than two out of the following guarantees:</p>
+
+    <ul>
+
       <li><b>Consistency: </b>Every read receives the most recent write</li>
+
       <li><b>Availability: </b>Every request received by a functional node must result in a response</li>
+
       <li><b>Partition Tolerance: </b>The distributed system should continue to operate despite communication breakages that separate the network into clusters which are unable to communicate with each other.</li>
+
     </ul>
 
-    <h5 style="margin-top: 50px; font-weight: bold;">Historical Background:</h5>
-    <p style="font-size: 20px;">CAP theorem was proposed in the field of theoretical computer science by computer scientist Eric Brewer at the 2000 Symposium on Principles of Distributed Computing (PODC). During the time, the size of data was growing immensely, and the existing ACID databases weren’t able to scale to satisfy that demand. This led to the growth of a new paradigm called BASE (basically available, soft-state, eventual consistency). Brewer analyzed the paradigm changes and its implications and presented his findings in his talk, marking the inception of CAP Theorem.</p>
+    <h5>Historical Background:</h5>
 
-    <h5 style="margin-top: 50px; font-weight: bold;">Current State:</h5>
-    <p style="font-size: 20px;">Given the fact that no distributed system is safe from network failures, network partitioning has to be tolerated, and we have to make the trade-off between consistency vs. availability. The resulting system isn’t entirely consistent or available - but a combination which is reasonable for specific needs.  It implies that when a system chooses consistency over availability, the system will return an error or a time-out if particular information cannot be guaranteed to be up to date due to network partitioning. When choosing availability over consistency, the system will always process the query and try to return the most recent available version of the information, even if it cannot guarantee it is up to date due to network partitioning.</p>
+    <p>CAP theorem was proposed in the field of theoretical computer science by computer scientist Eric Brewer at the 2000 Symposium on Principles of Distributed Computing (PODC). During the time, the size of data was growing immensely, and the existing ACID databases weren’t able to scale to satisfy that demand. This led to the growth of a new paradigm called BASE (basically available, soft-state, eventual consistency). Brewer analyzed the paradigm changes and its implications and presented his findings in his talk, marking the inception of CAP Theorem.</p>
 
-    <p style="font-size: 20px;">Let’s try to understand this further using some real-world examples.</p>
+    <h5>Current State:</h5>
 
-    <h5 style="margin-top: 30px; font-weight: bold;">Example 1: Flight Booking System</h5>
+    <p>Given the fact that no distributed system is safe from network failures, network partitioning has to be tolerated, and we have to make the trade-off between consistency vs. availability. The resulting system isn’t entirely consistent or available - but a combination which is reasonable for specific needs.  It implies that when a system chooses consistency over availability, the system will return an error or a time-out if particular information cannot be guaranteed to be up to date due to network partitioning. When choosing availability over consistency, the system will always process the query and try to return the most recent available version of the information, even if it cannot guarantee it is up to date due to network partitioning.</p>
+
+    <p>Let’s try to understand this further using some real-world examples.</p>
+
+    <h5>Example 1: Flight Booking System</h5>
     
     <img src="{% static 'images/CAP-image-1.png' %}" class="Image" style="margin-top:25px; margin-bottom: 25px;">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 1 : CAP Application - Flight Booking System</i></p>
-    <p style="margin-top: 30px; font-size: 20px;">In the image above(Fig 1), Alice and Bob want to book the last flight ticket on a distributed system which uses peer-to-peer distribution with two nodes(New York for Alice and Sydney for Bob). For ensuring consistency when Alice wants to book the ticket, then the New York node needs to communicate with the Sydney node, and both nodes must agree on the serialization of the requests. It provides consistency; however, in the case of any network breakage, both the nodes won’t be able to book the flight ticket, sacrificing availability.</p>
 
-    <p style="font-size: 20px;">To gain more availability, we might allow both the nodes to keep accepting flight reservations even if the network line breaks. The worst possible outcome of this approach is that Alice and Bob both will end up making the flight reservation. However, such situations can be resolved using domain knowledge. It’s a pretty common occurrence that the flights are overbooked and then the flight companies address such cases by taking the appropriate measures (e.g., Refunds, moving to another flight, etc.).</p>
+    <p align="middle" class="figure-title"><i>Fig 1 : CAP Application - Flight Booking System</i></p>
 
-    <h5 style="margin-top: 30px; font-weight: bold;">Example 2: E-commerce shopping cart</h5>
+    <p>In the image above(Fig 1), Alice and Bob want to book the last flight ticket on a distributed system which uses peer-to-peer distribution with two nodes(New York for Alice and Sydney for Bob). For ensuring consistency when Alice wants to book the ticket, then the New York node needs to communicate with the Sydney node, and both nodes must agree on the serialization of the requests. It provides consistency; however, in the case of any network breakage, both the nodes won’t be able to book the flight ticket, sacrificing availability.</p>
+
+    <p>To gain more availability, we might allow both the nodes to keep accepting flight reservations even if the network line breaks. The worst possible outcome of this approach is that Alice and Bob both will end up making the flight reservation. However, such situations can be resolved using domain knowledge. It’s a pretty common occurrence that the flights are overbooked and then the flight companies address such cases by taking the appropriate measures (e.g., Refunds, moving to another flight, etc.).</p>
+
+    <h5>Example 2: E-commerce shopping cart</h5>
     
     <img src="{% static 'images/CAP-image-2.png' %}" class="Image" style="margin-top:25px; margin-bottom: 25px;">
-    <p align="middle" style="margin-top: 0px; font-size: 20px;"><i>Fig 2: Partition resulting into the two carts being non-accessible</i></p>
 
-    <p style="margin-top: 30px; font-size: 20px;">In e-commerce websites, the customers are allowed to add items on their shopping cart, which leads to a customer having multiple shopping carts. In the image above, Alice and Bob are a couple sharing the same account of the e-commerce website. Alice is in London, and Bob is in Boston, and they are adding items on the cart. Alice’s cart exists on the London node and Bob’s on New York node when a network failure occurs, and they aren’t able to communicate with each other. It leads to a scenario where Alice’s cart doesn’t show the items added by Bob and vice versa. There are several ways to recover from partitions (talk by Eric Brewer to dive deeper on the possible ways of doing that). One such possible solution is to trigger the checkout process only after ensuring that partition has recovered and then merge the items from Alice’s and Bob’s cart into a single cart.</p>
+    <p class="figure-title" align="middle"><i>Fig 2: Partition resulting into the two carts being non-accessible</i></p>
 
-    <h5 style="margin-top: 50px; font-weight: bold;">Conclusion:</h5>
-    <p style="font-size: 20px;">Often, the situations are tied to the domain and requires domain knowledge to determine the resolution. For a news media, we can tolerate old pages for minutes; however, in case of financial trading instruments, we can’t rely on deciding on stale data. This decision needs the involvement of the development team and the domain experts. CAP Theorem is often used(and abused) when talking about consistency in distributed systems. However, the significant trade-off we make is between consistency and latency. Consistency can be improved by involving more nodes in the interaction at the cost of adding more time engaged in the communication. It leads us to think of availability as the maximum limit of latency that can be tolerated, once that limit is breached, the system is deemed as unavailable.</p>
+    <p>In e-commerce websites, the customers are allowed to add items on their shopping cart, which leads to a customer having multiple shopping carts. In the image above, Alice and Bob are a couple sharing the same account of the e-commerce website. Alice is in London, and Bob is in Boston, and they are adding items on the cart. Alice’s cart exists on the London node and Bob’s on New York node when a network failure occurs, and they aren’t able to communicate with each other. It leads to a scenario where Alice’s cart doesn’t show the items added by Bob and vice versa. There are several ways to recover from partitions (talk by Eric Brewer to dive deeper on the possible ways of doing that). One such possible solution is to trigger the checkout process only after ensuring that partition has recovered and then merge the items from Alice’s and Bob’s cart into a single cart.</p>
 
-</div>  
+    <h5>Conclusion:</h5>
+
+    <p>Often, the situations are tied to the domain and requires domain knowledge to determine the resolution. For a news media, we can tolerate old pages for minutes; however, in case of financial trading instruments, we can’t rely on deciding on stale data. This decision needs the involvement of the development team and the domain experts. CAP Theorem is often used(and abused) when talking about consistency in distributed systems. However, the significant trade-off we make is between consistency and latency. Consistency can be improved by involving more nodes in the interaction at the cost of adding more time engaged in the communication. It leads us to think of availability as the maximum limit of latency that can be tolerated, once that limit is breached, the system is deemed as unavailable.</p>
+
+  </div>  <!-- end of div "block-content" --> 
     
+    <!-- Buttons for Previous-Next Functionality -->
     <div class="prev-next-functionality">
-      <div class="prev-next-functionality-2">
+
+      <div class="prev-next-sub">
 
         <a class="next" href="{% url 'chapter2' %}">
           <em>Next →</em>
           <span>Consistent Hashing</span>
         </a>
-      </div>
-     </div>
+
+      </div> <!-- end of div class "prev-next-functionality" -->
+
+    </div> <!-- end of div class "prev-next-sub" -->
 
 </body>
 </html>	
