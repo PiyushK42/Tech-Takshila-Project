@@ -37,10 +37,10 @@
 
  <section id="subject-topics">
 
-  <div class="subject">
-
+  <div class="subject">   
+  
 	<div class="sidebar" id="mySidebar">
-
+      
       <div class="subject-bar" id="sub1">
 
    		<h5 class="subject-module">CHAPTERS</h5>
@@ -132,6 +132,7 @@
          </div>  <!-- end of div "subject-topic-bar" -->
 
          <!--END OF TOPIC LIST DIV-->
+
              
       </div>   <!-- end of div "subject-bar" -->
 
@@ -151,7 +152,7 @@
         </script>
        
        <!-- Script for Opening and Closing Subject Nav-bar -->
-       <script>
+       <!--<script>
    	    function openNav() {
    	      if (document.getElementById("test1").style.width === "100%"){
    	 	   var width = window.innerWidth;
@@ -172,19 +173,50 @@
               document.getElementById("test1").style.width =  "100%";
           }
        }
-
-      </script>
+      </script>-->
     
     <!-- TOPIC CONTENT -->
-    <div id="topic-content"> 
-      <iframe src="{% url 'content' %}" height="515" width="80.7%" frameborder="0" name="test1" id="test1" class="content">
+   <!-- <div id="topic-content"> 
+      <iframe src="{% url 'content' %}" height="515" width="80.7%" frameborder="0" name="test1" id="test1">
    	  </iframe> 
+    </div> -->
+
+    <div id="topic-content">
+        <iframe class="resp-iframe" src="{% url 'content' %}" frameborder="0" name="test1" id="test1">
+       </iframe>
+      </div>
+       
     </div>
 
      <style>
-       body, html {width: 100%; margin: 0px; padding: 0; overflow: hidden;}
+       body, html {width: 100%; height:100%; margin: 0px; padding: 0; overflow: hidden;}
      </style>
     <!-- END OF TOPIC CONTENT --> 
+    <script>
+    function openNav() {
+
+          var width = window.innerWidth;
+
+          if (document.getElementById("topic-content").style.marginLeft === "0px"){
+            
+            if(width<=450)
+            {  document.getElementById("mySidebar").style.width = "100%";
+               document.getElementById("topic-content").style.marginLeft = "100%";
+               document.getElementById("test1").style.width =  "0";                            
+            }
+            else{
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("topic-content").style.marginLeft = "250px";
+             document.getElementById("test1").style.width =  "100%";
+            } 
+          }
+          else
+          {   document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("topic-content").style.marginLeft = "0";
+              document.getElementById("test1").style.width =  "100%";
+          }    
+       }
+     </script>  
 
   </div>   <!-- end of div "subject" --> 
 

@@ -37,76 +37,6 @@ img.logo {
 
 /*------------------------ Styling of Landing Page --------------------------------*/ 
 
-/*-------- Styling of Subject Carousel (Owl-Carousel)------------- */
-
-.owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next,
-  .owl-carousel .owl-dot {
-    font-family: 'Material Icons';
-    font-size: 4rem;
-}
-.owl-nav {height:0;margin:0;}
-
-.owl-carousel .owl-nav .owl-prev:before{
-    font-family: "Material Icons";
-    content: "\E5CC";
-    font-size: 4rem;
-    margin-left:16px;
-    position: absolute;
-    top: 40%;
-    right: 0px;
-    height: auto;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
-                 0px 0px 8px rgba(0,0,0,0.05),
-                 0px 0px 12px rgba(0,0,0,0.05);
-}
-
-.owl-carousel .owl-nav .owl-next:after{
-    font-family: "Material Icons";
-    content: "\E5CB";
-    font-size: 4rem;
-    margin-right: 16px;
-    position: absolute;
-    top: 40%;
-    left: 0px;
-    height: 100%;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
-                 0px 0px 8px rgba(0,0,0,0.05),
-                 0px 0px 12px rgba(0,0,0,0.05);
- }
-
-}
-
-img.activator {
-  display: block; 
-  margin: 50px 50px 50px 65px;  
-  width: 50%; 
-  border: 1px solid #229393; 
-  border-radius: 99px;
-}
-
-.card-reveal::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #fff;
-}
-
-.card-reveal::-webkit-scrollbar
-{
-  width: 7px;
-  background-color: #e3e8e3;
-  border-radius: 10px; 
-}
-
-.card-reveal::-webkit-scrollbar-thumb
-{
-  border-radius: 10px;
-  background-color: #bfc1bf;
-}
-
-/*---------end of styling subject carousel---------------*/
-
 
  /*-------------FEEDBACK THEMING-------------------*/
 
@@ -254,13 +184,13 @@ img.activator {
 .subject {
   margin-top: 10px; 
   border-top: 4px solid rgb(201, 200, 255); 
-  border-bottom: 4px solid rgb(201, 200, 255);
+  /*border-bottom: 4px solid rgb(201, 200, 255);*/
  }
 
  .sidebar {
   height: 100%; 
-  width: 250px; 
-  position: fixed; /
+  width: 280px; 
+  position: fixed; 
   z-index: 1; 
   top: 148px;
   left: 0;
@@ -377,29 +307,70 @@ img.activator {
 }
 
 #topic-content {
+    position: relative;
+    margin-left: 250px;
+    transition: margin-left .5s;
+}
+
+.resp-iframe {
+    top: 0%;
+    left: 0px;
+    width: 100%;
+    height: 78vh;
+}
+
+.activator .image-icon {
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+/*
+#topic-content {
   transition: margin-left .5s; 
   padding: 0px;
   width:100%; 
   margin-left: 250px;
-}
+}*/
 
 /* FOR MEDIA SCREEN DEVICES */ 
 
-@media screen and (max-width: 450px) and (max-height: 667px){
-  .sidebar {top: 144px; width: 100%;}
+@media screen and (max-width: 420px) and (max-height: 640px) {
+  #topic-content .resp-iframe{height: 75vh;} 
+  .sidebar { top: 144px; width: 250px;}
+}
+
+@media screen and (max-width: 450px) and (max-height: 670px){
   .subjectname {font-size: 17px; margin-left: 20px; margin-top: 15px;}
   .subject-1 {height: 330px;}
-  #topic-content iframe{height: 420px;}
+  #topic-content .resp-iframe{height: 78vh;}
+  .sidebar { top: 144px; width: 250px;}
+  
 }
 
 @media screen and (max-width: 450px) and (min-height: 700px){
-  .sidebar { top: 144px; width: 100%;}
   .subjectname {font-size: 17px; margin-left: 20px; margin-top: 15px;}
+  #topic-content .resp-iframe{height: 78vh;}
+  .sidebar {top: 144px; width: 0px;}
+  #topic-content {margin-left: 0px;}
+  #test {width: 100%;}
 }
 
 @media screen and (min-height: 800px) {
-  #mySidebar .subject-bar .subject-1 {height: 560px;}
-  #topic-content iframe{height: 650px;}  
+  #topic-content .resp-iframe{height: 80vh;}  
+}
+
+@media screen and (min-height: 900px) {
+  #topic-content .resp-iframe{height: 82vh;}  
+}
+
+@media screen and (min-height: 1000px) {
+  #topic-content .resp-iframe{height: 85vh;}  
+}
+
+@media screen and (min-height: 1200px) {
+  #topic-content .resp-iframe{height: 87vh;}  
 }
 
 /* Styling of Buttons for Previous and Next Topic in Topic Content */
@@ -562,6 +533,9 @@ img.activator {
   margin-bottom: 20px; 
   font-family: 'Avenir Black' !important; 
   font-weight: bold;
+  margin-left: 50px; 
+  margin-right: 50px;
+  overflow-x: hidden;
 }
 
 .block-content {
@@ -572,6 +546,7 @@ img.activator {
   margin-right: 50px; 
   border-top: 1px solid rgb(223, 223, 223); 
   border-bottom: 1px solid rgb(223, 223, 223);
+  overflow-x: hidden;
 }
 
 .block-content h5 {
