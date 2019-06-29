@@ -34,7 +34,7 @@
     
     <!-- Image Slider -->
     <section id="image-slider">
-
+     
      <div class="slider"> 
        
        <!-- List of images in slider -->
@@ -42,7 +42,7 @@
          
          <!-- Image-1 -->
          <li>  
-           <img src="{% static 'images/landing-page/main-slider/4.jpg' %}"> 
+           <img src="{% static 'images/landing-page/main-slider/4.jpg' %}" class="responsive-img"> 
            
             <div class="caption center-align">  
               <h3 style="color: #bababc">WELCOME TO TECH TAKSHILA</h3>  
@@ -52,7 +52,7 @@
          
          <!-- Image-2 --> 
          <li>  
-           <img src="{% static 'images/landing-page/main-slider/6.jpg' %}"> 
+           <img src="{% static 'images/landing-page/main-slider/6.jpg' %}" class="responsive-img"> 
          
            <div class="caption center-align">  
              <h3 class="grey-text.text-darken-1">WELCOME TO TECH TAKSHILA</h3>    
@@ -62,7 +62,7 @@
 
        <!-- Image-3 -->
         <li>  
-          <img src="{% static 'images/landing-page/main-slider/3.jpg' %}"> 
+          <img src="{% static 'images/landing-page/main-slider/3.jpg' %}" class="responsive-img"> 
          
           <div class="caption center-align">  
             <h3 style="color: #3b464f">WELCOME TO TECH TAKSHILA</h3>    
@@ -72,7 +72,7 @@
 
        <!-- Image-4 -->
         <li>  
-          <img src="{% static 'images/landing-page/main-slider/5.jpg' %}">
+          <img src="{% static 'images/landing-page/main-slider/5.jpg' %}" class="responsive-img">
  
           <div class="caption center-align">  
             <h3 class="grey-text.text-darken-1">WELCOME TO TECH TAKSHILA</h3>    
@@ -101,7 +101,7 @@
     
                 M.Slider.init(slider,{
                   indicators: false,
-                  height: 400,
+                  height: 550,
                   transition: 300,
                   interval: 6000
               });
@@ -111,12 +111,15 @@
     <!--Subject Cards-->
      <div class="container services">
 
-       <h3>Subjects</h3>
+       <h3 class="service-name">Subjects</h3>
+
        <div class="row">
         
         <!--Card 1-->
         <div class="col s12 m6 l3 center-align">
 
+
+         <div class="hoverable">
           <div class="card">
 
             <div class="card-content">
@@ -127,17 +130,19 @@
               </p>
             </div>
 
-            <div class="card-action"><a href="{% url 'ds' %}">Read more...</a></div>
+            <div class="card-action"><a href="{% url 'ds' %}"" style="color: rgb(75, 73, 255);;">Read more...</a></div>
           </div>
+         </div> 
 
         </div>
         <!---->
 
         <!--Card 2-->
         <div class="col s12 m6 l3 center-align">
-
+         
+         <div class="hoverable">
           <div class="card">
-
+           
             <div class="card-content">
               <i class="material-icons large">book</i>
               <h5>Product Management</h5>
@@ -146,14 +151,17 @@
               </p>
             </div>
 
-            <div class="card-action"><a href="#">Read more...</a></div>
+            <div class="card-action"><a href="#" style="color: rgb(75, 73, 255);">Read more...</a></div>
           </div>
+        </div>
+
         </div>
         <!---->
 
         <!--Card 3-->
         <div class="col s12 m6 l3 center-align">
-
+         
+         <div class="hoverable">
           <div class="card">
 
             <div class="card-content">
@@ -162,17 +170,19 @@
               <p>
                 A distributed system contains multiple nodes that are physically separate but linked together using the network. 
               </p>
-            </div>
+            </div> 
 
-            <div class="card-action"><a href="#">Read more...</a></div>
+            <div class="card-action"><a href="#" style="color: rgb(75, 73, 255);">Read more...</a></div>
           </div>
+         </div> 
 
         </div>
         <!---->
 
         <!--Card 4-->
         <div class="col s12 m6 l3 center-align">
-
+         
+         <div class="hoverable">
           <div class="card">
 
             <div class="card-content">
@@ -183,8 +193,9 @@
               </p>
             </div>
 
-            <div class="card-action"><a href="#">Read more...</a></div>
+            <div class="card-action"><a href="#" style="color: rgb(75, 73, 255);">Read more...</a></div>
           </div>
+        </div>
 
         </div>
         <!---->
@@ -204,12 +215,12 @@
         <!-- Feedback-List -->
         <div class="feedback">
           
-          <!-- Feedback-1 -->
+          <!-- Feedback-1 version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"-->
           <div class="feedback-container">
 
             <div class="feed-svg">
 
-              <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+              <svg width="638px" height="275px" viewBox="0 0 638 275"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
 
            </div> 
 
@@ -219,12 +230,12 @@
 
           </div>
           
-          <!-- Feedback-2 -->
+          <!-- Feedback-2 version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"-->
           <div class="feedback-container">
 
             <div class="feed-svg">
 
-              <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+              <svg width="638px" height="275px" viewBox="0 0 638 275"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
 
             </div> 
 
@@ -233,12 +244,12 @@
             <div class="feedback-owner-position">Software Developer</div>
           </div>
 
-          <!-- Feedback-3 -->
+          <!-- Feedback-3 version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"-->
           <div class="feedback-container">
 
              <div class="feed-svg">
 
-               <svg width="638px" height="275px" viewBox="0 0 638 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
+               <svg width="638px" height="275px" viewBox="0 0 638 275"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.13"><g transform="translate(-2878.000000, -3103.000000)" fill="#4951F5" fill-rule="nonzero"><path d="M2890,3102.99994 L3503.58,3102.99994 C3510.20742,3102.99994 3515.58,3108.37253 3515.58,3114.99994 C3515.58,3114.99994 3515.58,3114.99994 3515.58,3114.99994 L3515.58,3326 C3515.58,3332.62742 3510.20742,3338 3503.58,3338 L3045.55593,3338 C3044.55517,3338 3043.59076,3338.37514 3042.85304,3339.05138 L3002.12813,3376.38254 C3000.49966,3377.87531 2997.96939,3377.7653 2996.47662,3376.13683 C2995.86368,3375.46816 2995.49621,3374.61101 2995.4345,3373.70602 L2993.25418,3341.7279 C2993.11108,3339.62925 2991.36697,3338 2989.26344,3338 L2890,3338 C2883.37258,3338 2878,3332.62742 2878,3326 L2878,3114.99994 C2878,3108.37253 2883.37258,3102.99994 2890,3102.99994 Z"></path></g></g></svg>
 
               </div> 
 
